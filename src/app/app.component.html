@@ -1,0 +1,90 @@
+<div class="container">
+    <div class="sidenav">
+      <div class="logo">
+        <img src="assets/k4help.jpg" alt="">
+      </div>
+      <div class="myp">
+        <button routerLink="/adminprofile"> My Profile </button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/manageuser"> Manage User </button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/managecampaigner"> Manage Campaigner </button>
+      </div>
+  
+      <div class="sel_opt">
+        <select (click)="onChange($event)">
+          <option selected disabled routerLink="/manageroles">Manage Role</option>
+          <option *ngFor="let task of task1" [value]="task.value">{{task.value}}</option>
+        </select>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/manageplans">Manage Plans</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/manageimages">Manage Images</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/managemovingtext">Manage Moving Texts</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/managehospitals">Manage Hospitals</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/managecause">Manage Cause</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/manageclaimeddonations">Manage Unclaimed Donations</button>
+      </div>
+  
+      <div class="sel_opt">
+        <Select (change)="navigate($event)">
+          <option>Manage Campaign</option>
+          <option *ngFor="let task of task2" [value]="task.value">{{task.value}}</option>
+        </Select>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/manageaccountdetails">Manage Account Details</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/managedonor">Manage Donor</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/managecyb">Manage CYB</button>
+      </div>
+  
+      <div class="sel_opt">
+        <Select (change)="withdrawlRequest($event)">
+          <option selected disabled routerLink="/withdrawlrequest">Withdrawl Request</option>
+          <option *ngFor="let task of task3" [value]="task.value">{{task.value}}</option>
+        </Select>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/resetpassword">Reset Passwords</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/socialhandles">Social Handles</button>
+      </div>
+  
+      <div class="myp">
+        <button routerLink="/logout">Log Out</button>
+      </div>
+    </div>
+        <div class="form">
+            <router-outlet></router-outlet>
+        </div>
+  </div>
